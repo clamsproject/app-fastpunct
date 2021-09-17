@@ -1,0 +1,5105 @@
+{
+  "metadata": {
+    "mmif": "http://mmif.clams.ai/0.4.0"
+  },
+  "documents": [
+    {
+      "@type": "http://mmif.clams.ai/0.4.0/vocabulary/AudioDocument",
+      "properties": {
+        "mime": "audio",
+        "id": "d1",
+        "location": "file:///audio_in/newshour-99-04-27-short.wav"
+      }
+    }
+  ],
+  "views": [
+    {
+      "id": "v_0",
+      "metadata": {
+        "timestamp": "2021-09-09T13:56:23.603751",
+        "app": "http://apps.clams.ai/aapb-pua-kaldi-wrapper/0.2.2",
+        "contains": {
+          "http://mmif.clams.ai/0.4.0/vocabulary/TextDocument": {},
+          "http://vocab.lappsgrid.org/Token": {},
+          "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame": {
+            "timeUnit": "milliseconds",
+            "document": "d1"
+          },
+          "http://mmif.clams.ai/0.4.0/vocabulary/Alignment": {}
+        },
+        "parameters": {
+          "use_speech_segmentation": "true"
+        }
+      },
+      "annotations": [
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TextDocument",
+          "properties": {
+            "text": {
+              "@value": "it's been good evening i'm jim lehrer on the newshour tonight phil ponce likes of the us military reservist call up what it means and who's affected senator attacked and urban debate new post colorado gun control proposals charles krauss tells the story of brazil's economic crisis and rebound and poet laureate robert pinsky reason ben johnson paul all on children and tragedy and all follows a summary that is this tuesday adm keating the world is the biggest challenge of the new century which is widely condemned promote satellite technology to help the american farmer be even more connected to the world travelers and by the corporation for public broadcasting and by the annual financial support from viewers like you president clinton authorized the pentagon today to call up more than thirty thousand reserve and national guard personnel they'll be used in the air campaign over kosovo and the three g i've captured by a bizarre troops were pronounced dead by red cross doctor as bagels bombing of serbia and the flight of ethnic albanian refugees from kosovo continue on beer narrates our update report chime",
+              "@language": "en"
+            },
+            "id": "td_1"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "td_1",
+            "source": "d1",
+            "id": "al_1"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 0,
+            "end": 4,
+            "document": "v_0:td_1",
+            "word": "it's",
+            "id": "to_1"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 12920,
+            "end": 13010,
+            "frameType": "speech",
+            "id": "tf_1"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_1",
+            "source": "tf_1",
+            "id": "al_2"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 5,
+            "end": 9,
+            "document": "v_0:td_1",
+            "word": "been",
+            "id": "to_2"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 13010,
+            "end": 14760,
+            "frameType": "speech",
+            "id": "tf_2"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_2",
+            "source": "tf_2",
+            "id": "al_3"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 10,
+            "end": 14,
+            "document": "v_0:td_1",
+            "word": "good",
+            "id": "to_3"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 19860,
+            "end": 20040,
+            "frameType": "speech",
+            "id": "tf_3"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_3",
+            "source": "tf_3",
+            "id": "al_4"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 15,
+            "end": 22,
+            "document": "v_0:td_1",
+            "word": "evening",
+            "id": "to_4"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 20040,
+            "end": 20500,
+            "frameType": "speech",
+            "id": "tf_4"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_4",
+            "source": "tf_4",
+            "id": "al_5"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 23,
+            "end": 26,
+            "document": "v_0:td_1",
+            "word": "i'm",
+            "id": "to_5"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 20500,
+            "end": 20670,
+            "frameType": "speech",
+            "id": "tf_5"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_5",
+            "source": "tf_5",
+            "id": "al_6"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 27,
+            "end": 30,
+            "document": "v_0:td_1",
+            "word": "jim",
+            "id": "to_6"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 20670,
+            "end": 20910,
+            "frameType": "speech",
+            "id": "tf_6"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_6",
+            "source": "tf_6",
+            "id": "al_7"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 31,
+            "end": 37,
+            "document": "v_0:td_1",
+            "word": "lehrer",
+            "id": "to_7"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 20910,
+            "end": 21370,
+            "frameType": "speech",
+            "id": "tf_7"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_7",
+            "source": "tf_7",
+            "id": "al_8"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 38,
+            "end": 40,
+            "document": "v_0:td_1",
+            "word": "on",
+            "id": "to_8"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 21540,
+            "end": 21710,
+            "frameType": "speech",
+            "id": "tf_8"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_8",
+            "source": "tf_8",
+            "id": "al_9"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 41,
+            "end": 44,
+            "document": "v_0:td_1",
+            "word": "the",
+            "id": "to_9"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 21710,
+            "end": 21780,
+            "frameType": "speech",
+            "id": "tf_9"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_9",
+            "source": "tf_9",
+            "id": "al_10"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 45,
+            "end": 53,
+            "document": "v_0:td_1",
+            "word": "newshour",
+            "id": "to_10"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 21780,
+            "end": 22220,
+            "frameType": "speech",
+            "id": "tf_10"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_10",
+            "source": "tf_10",
+            "id": "al_11"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 54,
+            "end": 61,
+            "document": "v_0:td_1",
+            "word": "tonight",
+            "id": "to_11"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 22220,
+            "end": 22710,
+            "frameType": "speech",
+            "id": "tf_11"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_11",
+            "source": "tf_11",
+            "id": "al_12"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 62,
+            "end": 66,
+            "document": "v_0:td_1",
+            "word": "phil",
+            "id": "to_12"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 22710,
+            "end": 22900,
+            "frameType": "speech",
+            "id": "tf_12"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_12",
+            "source": "tf_12",
+            "id": "al_13"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 67,
+            "end": 72,
+            "document": "v_0:td_1",
+            "word": "ponce",
+            "id": "to_13"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 22900,
+            "end": 23440,
+            "frameType": "speech",
+            "id": "tf_13"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_13",
+            "source": "tf_13",
+            "id": "al_14"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 73,
+            "end": 78,
+            "document": "v_0:td_1",
+            "word": "likes",
+            "id": "to_14"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 23440,
+            "end": 23730,
+            "frameType": "speech",
+            "id": "tf_14"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_14",
+            "source": "tf_14",
+            "id": "al_15"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 79,
+            "end": 81,
+            "document": "v_0:td_1",
+            "word": "of",
+            "id": "to_15"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 23730,
+            "end": 23820,
+            "frameType": "speech",
+            "id": "tf_15"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_15",
+            "source": "tf_15",
+            "id": "al_16"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 82,
+            "end": 85,
+            "document": "v_0:td_1",
+            "word": "the",
+            "id": "to_16"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 23820,
+            "end": 23910,
+            "frameType": "speech",
+            "id": "tf_16"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_16",
+            "source": "tf_16",
+            "id": "al_17"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 86,
+            "end": 88,
+            "document": "v_0:td_1",
+            "word": "us",
+            "id": "to_17"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 23910,
+            "end": 24250,
+            "frameType": "speech",
+            "id": "tf_17"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_17",
+            "source": "tf_17",
+            "id": "al_18"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 89,
+            "end": 97,
+            "document": "v_0:td_1",
+            "word": "military",
+            "id": "to_18"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 24250,
+            "end": 24770,
+            "frameType": "speech",
+            "id": "tf_18"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_18",
+            "source": "tf_18",
+            "id": "al_19"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 98,
+            "end": 107,
+            "document": "v_0:td_1",
+            "word": "reservist",
+            "id": "to_19"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 24770,
+            "end": 25360,
+            "frameType": "speech",
+            "id": "tf_19"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_19",
+            "source": "tf_19",
+            "id": "al_20"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 108,
+            "end": 112,
+            "document": "v_0:td_1",
+            "word": "call",
+            "id": "to_20"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 25360,
+            "end": 25720,
+            "frameType": "speech",
+            "id": "tf_20"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_20",
+            "source": "tf_20",
+            "id": "al_21"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 113,
+            "end": 115,
+            "document": "v_0:td_1",
+            "word": "up",
+            "id": "to_21"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 25720,
+            "end": 25920,
+            "frameType": "speech",
+            "id": "tf_21"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_21",
+            "source": "tf_21",
+            "id": "al_22"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 116,
+            "end": 120,
+            "document": "v_0:td_1",
+            "word": "what",
+            "id": "to_22"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 26170,
+            "end": 26330,
+            "frameType": "speech",
+            "id": "tf_22"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_22",
+            "source": "tf_22",
+            "id": "al_23"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 121,
+            "end": 123,
+            "document": "v_0:td_1",
+            "word": "it",
+            "id": "to_23"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 26330,
+            "end": 26470,
+            "frameType": "speech",
+            "id": "tf_23"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_23",
+            "source": "tf_23",
+            "id": "al_24"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 124,
+            "end": 129,
+            "document": "v_0:td_1",
+            "word": "means",
+            "id": "to_24"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 26470,
+            "end": 26890,
+            "frameType": "speech",
+            "id": "tf_24"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_24",
+            "source": "tf_24",
+            "id": "al_25"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 130,
+            "end": 133,
+            "document": "v_0:td_1",
+            "word": "and",
+            "id": "to_25"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 26890,
+            "end": 27040,
+            "frameType": "speech",
+            "id": "tf_25"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_25",
+            "source": "tf_25",
+            "id": "al_26"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 134,
+            "end": 139,
+            "document": "v_0:td_1",
+            "word": "who's",
+            "id": "to_26"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 27040,
+            "end": 27270,
+            "frameType": "speech",
+            "id": "tf_26"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_26",
+            "source": "tf_26",
+            "id": "al_27"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 140,
+            "end": 148,
+            "document": "v_0:td_1",
+            "word": "affected",
+            "id": "to_27"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 27270,
+            "end": 27870,
+            "frameType": "speech",
+            "id": "tf_27"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_27",
+            "source": "tf_27",
+            "id": "al_28"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 149,
+            "end": 156,
+            "document": "v_0:td_1",
+            "word": "senator",
+            "id": "to_28"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 28240,
+            "end": 28640,
+            "frameType": "speech",
+            "id": "tf_28"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_28",
+            "source": "tf_28",
+            "id": "al_29"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 157,
+            "end": 165,
+            "document": "v_0:td_1",
+            "word": "attacked",
+            "id": "to_29"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 28640,
+            "end": 29030,
+            "frameType": "speech",
+            "id": "tf_29"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_29",
+            "source": "tf_29",
+            "id": "al_30"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 166,
+            "end": 169,
+            "document": "v_0:td_1",
+            "word": "and",
+            "id": "to_30"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 29030,
+            "end": 29230,
+            "frameType": "speech",
+            "id": "tf_30"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_30",
+            "source": "tf_30",
+            "id": "al_31"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 170,
+            "end": 175,
+            "document": "v_0:td_1",
+            "word": "urban",
+            "id": "to_31"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 29230,
+            "end": 29540,
+            "frameType": "speech",
+            "id": "tf_31"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_31",
+            "source": "tf_31",
+            "id": "al_32"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 176,
+            "end": 182,
+            "document": "v_0:td_1",
+            "word": "debate",
+            "id": "to_32"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 29540,
+            "end": 29950,
+            "frameType": "speech",
+            "id": "tf_32"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_32",
+            "source": "tf_32",
+            "id": "al_33"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 183,
+            "end": 186,
+            "document": "v_0:td_1",
+            "word": "new",
+            "id": "to_33"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 29950,
+            "end": 30140,
+            "frameType": "speech",
+            "id": "tf_33"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_33",
+            "source": "tf_33",
+            "id": "al_34"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 187,
+            "end": 191,
+            "document": "v_0:td_1",
+            "word": "post",
+            "id": "to_34"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 30140,
+            "end": 30510,
+            "frameType": "speech",
+            "id": "tf_34"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_34",
+            "source": "tf_34",
+            "id": "al_35"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 192,
+            "end": 200,
+            "document": "v_0:td_1",
+            "word": "colorado",
+            "id": "to_35"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 30510,
+            "end": 31080,
+            "frameType": "speech",
+            "id": "tf_35"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_35",
+            "source": "tf_35",
+            "id": "al_36"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 201,
+            "end": 204,
+            "document": "v_0:td_1",
+            "word": "gun",
+            "id": "to_36"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 31080,
+            "end": 31400,
+            "frameType": "speech",
+            "id": "tf_36"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_36",
+            "source": "tf_36",
+            "id": "al_37"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 205,
+            "end": 212,
+            "document": "v_0:td_1",
+            "word": "control",
+            "id": "to_37"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 31400,
+            "end": 31860,
+            "frameType": "speech",
+            "id": "tf_37"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_37",
+            "source": "tf_37",
+            "id": "al_38"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 213,
+            "end": 222,
+            "document": "v_0:td_1",
+            "word": "proposals",
+            "id": "to_38"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 31860,
+            "end": 32670,
+            "frameType": "speech",
+            "id": "tf_38"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_38",
+            "source": "tf_38",
+            "id": "al_39"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 223,
+            "end": 230,
+            "document": "v_0:td_1",
+            "word": "charles",
+            "id": "to_39"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 33050,
+            "end": 33400,
+            "frameType": "speech",
+            "id": "tf_39"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_39",
+            "source": "tf_39",
+            "id": "al_40"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 231,
+            "end": 237,
+            "document": "v_0:td_1",
+            "word": "krauss",
+            "id": "to_40"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 33400,
+            "end": 33780,
+            "frameType": "speech",
+            "id": "tf_40"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_40",
+            "source": "tf_40",
+            "id": "al_41"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 238,
+            "end": 243,
+            "document": "v_0:td_1",
+            "word": "tells",
+            "id": "to_41"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 33780,
+            "end": 34080,
+            "frameType": "speech",
+            "id": "tf_41"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_41",
+            "source": "tf_41",
+            "id": "al_42"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 244,
+            "end": 247,
+            "document": "v_0:td_1",
+            "word": "the",
+            "id": "to_42"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 34080,
+            "end": 34190,
+            "frameType": "speech",
+            "id": "tf_42"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_42",
+            "source": "tf_42",
+            "id": "al_43"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 248,
+            "end": 253,
+            "document": "v_0:td_1",
+            "word": "story",
+            "id": "to_43"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 34190,
+            "end": 34600,
+            "frameType": "speech",
+            "id": "tf_43"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_43",
+            "source": "tf_43",
+            "id": "al_44"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 254,
+            "end": 256,
+            "document": "v_0:td_1",
+            "word": "of",
+            "id": "to_44"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 34600,
+            "end": 34740,
+            "frameType": "speech",
+            "id": "tf_44"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_44",
+            "source": "tf_44",
+            "id": "al_45"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 257,
+            "end": 265,
+            "document": "v_0:td_1",
+            "word": "brazil's",
+            "id": "to_45"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 34740,
+            "end": 35280,
+            "frameType": "speech",
+            "id": "tf_45"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_45",
+            "source": "tf_45",
+            "id": "al_46"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 266,
+            "end": 274,
+            "document": "v_0:td_1",
+            "word": "economic",
+            "id": "to_46"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 35280,
+            "end": 35750,
+            "frameType": "speech",
+            "id": "tf_46"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_46",
+            "source": "tf_46",
+            "id": "al_47"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 275,
+            "end": 281,
+            "document": "v_0:td_1",
+            "word": "crisis",
+            "id": "to_47"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 35750,
+            "end": 36250,
+            "frameType": "speech",
+            "id": "tf_47"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_47",
+            "source": "tf_47",
+            "id": "al_48"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 282,
+            "end": 285,
+            "document": "v_0:td_1",
+            "word": "and",
+            "id": "to_48"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 36250,
+            "end": 36420,
+            "frameType": "speech",
+            "id": "tf_48"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_48",
+            "source": "tf_48",
+            "id": "al_49"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 286,
+            "end": 293,
+            "document": "v_0:td_1",
+            "word": "rebound",
+            "id": "to_49"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 36420,
+            "end": 37040,
+            "frameType": "speech",
+            "id": "tf_49"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_49",
+            "source": "tf_49",
+            "id": "al_50"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 294,
+            "end": 297,
+            "document": "v_0:td_1",
+            "word": "and",
+            "id": "to_50"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 37380,
+            "end": 37590,
+            "frameType": "speech",
+            "id": "tf_50"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_50",
+            "source": "tf_50",
+            "id": "al_51"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 298,
+            "end": 302,
+            "document": "v_0:td_1",
+            "word": "poet",
+            "id": "to_51"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 37590,
+            "end": 37880,
+            "frameType": "speech",
+            "id": "tf_51"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_51",
+            "source": "tf_51",
+            "id": "al_52"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 303,
+            "end": 311,
+            "document": "v_0:td_1",
+            "word": "laureate",
+            "id": "to_52"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 37880,
+            "end": 38270,
+            "frameType": "speech",
+            "id": "tf_52"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_52",
+            "source": "tf_52",
+            "id": "al_53"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 312,
+            "end": 318,
+            "document": "v_0:td_1",
+            "word": "robert",
+            "id": "to_53"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 38270,
+            "end": 38610,
+            "frameType": "speech",
+            "id": "tf_53"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_53",
+            "source": "tf_53",
+            "id": "al_54"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 319,
+            "end": 325,
+            "document": "v_0:td_1",
+            "word": "pinsky",
+            "id": "to_54"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 38610,
+            "end": 39170,
+            "frameType": "speech",
+            "id": "tf_54"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_54",
+            "source": "tf_54",
+            "id": "al_55"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 326,
+            "end": 332,
+            "document": "v_0:td_1",
+            "word": "reason",
+            "id": "to_55"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 39170,
+            "end": 39520,
+            "frameType": "speech",
+            "id": "tf_55"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_55",
+            "source": "tf_55",
+            "id": "al_56"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 333,
+            "end": 336,
+            "document": "v_0:td_1",
+            "word": "ben",
+            "id": "to_56"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 39520,
+            "end": 39760,
+            "frameType": "speech",
+            "id": "tf_56"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_56",
+            "source": "tf_56",
+            "id": "al_57"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 337,
+            "end": 344,
+            "document": "v_0:td_1",
+            "word": "johnson",
+            "id": "to_57"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 39760,
+            "end": 40240,
+            "frameType": "speech",
+            "id": "tf_57"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_57",
+            "source": "tf_57",
+            "id": "al_58"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 345,
+            "end": 349,
+            "document": "v_0:td_1",
+            "word": "paul",
+            "id": "to_58"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 40240,
+            "end": 40460,
+            "frameType": "speech",
+            "id": "tf_58"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_58",
+            "source": "tf_58",
+            "id": "al_59"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 350,
+            "end": 353,
+            "document": "v_0:td_1",
+            "word": "all",
+            "id": "to_59"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 40460,
+            "end": 40720,
+            "frameType": "speech",
+            "id": "tf_59"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_59",
+            "source": "tf_59",
+            "id": "al_60"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 354,
+            "end": 356,
+            "document": "v_0:td_1",
+            "word": "on",
+            "id": "to_60"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 40970,
+            "end": 41220,
+            "frameType": "speech",
+            "id": "tf_60"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_60",
+            "source": "tf_60",
+            "id": "al_61"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 357,
+            "end": 365,
+            "document": "v_0:td_1",
+            "word": "children",
+            "id": "to_61"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 41220,
+            "end": 41750,
+            "frameType": "speech",
+            "id": "tf_61"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_61",
+            "source": "tf_61",
+            "id": "al_62"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 366,
+            "end": 369,
+            "document": "v_0:td_1",
+            "word": "and",
+            "id": "to_62"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 41780,
+            "end": 42040,
+            "frameType": "speech",
+            "id": "tf_62"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_62",
+            "source": "tf_62",
+            "id": "al_63"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 370,
+            "end": 377,
+            "document": "v_0:td_1",
+            "word": "tragedy",
+            "id": "to_63"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 42040,
+            "end": 42690,
+            "frameType": "speech",
+            "id": "tf_63"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_63",
+            "source": "tf_63",
+            "id": "al_64"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 378,
+            "end": 381,
+            "document": "v_0:td_1",
+            "word": "and",
+            "id": "to_64"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 42980,
+            "end": 43140,
+            "frameType": "speech",
+            "id": "tf_64"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_64",
+            "source": "tf_64",
+            "id": "al_65"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 382,
+            "end": 385,
+            "document": "v_0:td_1",
+            "word": "all",
+            "id": "to_65"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 43140,
+            "end": 43280,
+            "frameType": "speech",
+            "id": "tf_65"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_65",
+            "source": "tf_65",
+            "id": "al_66"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 386,
+            "end": 393,
+            "document": "v_0:td_1",
+            "word": "follows",
+            "id": "to_66"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 43280,
+            "end": 43630,
+            "frameType": "speech",
+            "id": "tf_66"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_66",
+            "source": "tf_66",
+            "id": "al_67"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 394,
+            "end": 395,
+            "document": "v_0:td_1",
+            "word": "a",
+            "id": "to_67"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 43630,
+            "end": 43690,
+            "frameType": "speech",
+            "id": "tf_67"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_67",
+            "source": "tf_67",
+            "id": "al_68"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 396,
+            "end": 403,
+            "document": "v_0:td_1",
+            "word": "summary",
+            "id": "to_68"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 43720,
+            "end": 44110,
+            "frameType": "speech",
+            "id": "tf_68"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_68",
+            "source": "tf_68",
+            "id": "al_69"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 404,
+            "end": 408,
+            "document": "v_0:td_1",
+            "word": "that",
+            "id": "to_69"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 44110,
+            "end": 44250,
+            "frameType": "speech",
+            "id": "tf_69"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_69",
+            "source": "tf_69",
+            "id": "al_70"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 409,
+            "end": 411,
+            "document": "v_0:td_1",
+            "word": "is",
+            "id": "to_70"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 44250,
+            "end": 44660,
+            "frameType": "speech",
+            "id": "tf_70"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_70",
+            "source": "tf_70",
+            "id": "al_71"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 412,
+            "end": 416,
+            "document": "v_0:td_1",
+            "word": "this",
+            "id": "to_71"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 44660,
+            "end": 44890,
+            "frameType": "speech",
+            "id": "tf_71"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_71",
+            "source": "tf_71",
+            "id": "al_72"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 417,
+            "end": 424,
+            "document": "v_0:td_1",
+            "word": "tuesday",
+            "id": "to_72"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 44890,
+            "end": 45620,
+            "frameType": "speech",
+            "id": "tf_72"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_72",
+            "source": "tf_72",
+            "id": "al_73"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 425,
+            "end": 428,
+            "document": "v_0:td_1",
+            "word": "adm",
+            "id": "to_73"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 48420,
+            "end": 49270,
+            "frameType": "speech",
+            "id": "tf_73"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_73",
+            "source": "tf_73",
+            "id": "al_74"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 429,
+            "end": 436,
+            "document": "v_0:td_1",
+            "word": "keating",
+            "id": "to_74"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 49430,
+            "end": 49760,
+            "frameType": "speech",
+            "id": "tf_74"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_74",
+            "source": "tf_74",
+            "id": "al_75"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 437,
+            "end": 440,
+            "document": "v_0:td_1",
+            "word": "the",
+            "id": "to_75"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 49760,
+            "end": 49860,
+            "frameType": "speech",
+            "id": "tf_75"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_75",
+            "source": "tf_75",
+            "id": "al_76"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 441,
+            "end": 446,
+            "document": "v_0:td_1",
+            "word": "world",
+            "id": "to_76"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 49860,
+            "end": 50260,
+            "frameType": "speech",
+            "id": "tf_76"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_76",
+            "source": "tf_76",
+            "id": "al_77"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 447,
+            "end": 449,
+            "document": "v_0:td_1",
+            "word": "is",
+            "id": "to_77"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 50260,
+            "end": 50390,
+            "frameType": "speech",
+            "id": "tf_77"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_77",
+            "source": "tf_77",
+            "id": "al_78"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 450,
+            "end": 453,
+            "document": "v_0:td_1",
+            "word": "the",
+            "id": "to_78"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 50390,
+            "end": 50470,
+            "frameType": "speech",
+            "id": "tf_78"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_78",
+            "source": "tf_78",
+            "id": "al_79"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 454,
+            "end": 461,
+            "document": "v_0:td_1",
+            "word": "biggest",
+            "id": "to_79"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 50470,
+            "end": 50840,
+            "frameType": "speech",
+            "id": "tf_79"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_79",
+            "source": "tf_79",
+            "id": "al_80"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 462,
+            "end": 471,
+            "document": "v_0:td_1",
+            "word": "challenge",
+            "id": "to_80"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 50840,
+            "end": 51280,
+            "frameType": "speech",
+            "id": "tf_80"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_80",
+            "source": "tf_80",
+            "id": "al_81"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 472,
+            "end": 474,
+            "document": "v_0:td_1",
+            "word": "of",
+            "id": "to_81"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 51280,
+            "end": 51380,
+            "frameType": "speech",
+            "id": "tf_81"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_81",
+            "source": "tf_81",
+            "id": "al_82"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 475,
+            "end": 478,
+            "document": "v_0:td_1",
+            "word": "the",
+            "id": "to_82"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 51380,
+            "end": 51450,
+            "frameType": "speech",
+            "id": "tf_82"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_82",
+            "source": "tf_82",
+            "id": "al_83"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 479,
+            "end": 482,
+            "document": "v_0:td_1",
+            "word": "new",
+            "id": "to_83"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 51450,
+            "end": 51710,
+            "frameType": "speech",
+            "id": "tf_83"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_83",
+            "source": "tf_83",
+            "id": "al_84"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 483,
+            "end": 490,
+            "document": "v_0:td_1",
+            "word": "century",
+            "id": "to_84"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 51710,
+            "end": 52370,
+            "frameType": "speech",
+            "id": "tf_84"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_84",
+            "source": "tf_84",
+            "id": "al_85"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 491,
+            "end": 496,
+            "document": "v_0:td_1",
+            "word": "which",
+            "id": "to_85"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 52510,
+            "end": 52680,
+            "frameType": "speech",
+            "id": "tf_85"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_85",
+            "source": "tf_85",
+            "id": "al_86"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 497,
+            "end": 499,
+            "document": "v_0:td_1",
+            "word": "is",
+            "id": "to_86"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 52680,
+            "end": 52830,
+            "frameType": "speech",
+            "id": "tf_86"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_86",
+            "source": "tf_86",
+            "id": "al_87"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 500,
+            "end": 506,
+            "document": "v_0:td_1",
+            "word": "widely",
+            "id": "to_87"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 52830,
+            "end": 53330,
+            "frameType": "speech",
+            "id": "tf_87"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_87",
+            "source": "tf_87",
+            "id": "al_88"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 507,
+            "end": 516,
+            "document": "v_0:td_1",
+            "word": "condemned",
+            "id": "to_88"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 53330,
+            "end": 53860,
+            "frameType": "speech",
+            "id": "tf_88"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_88",
+            "source": "tf_88",
+            "id": "al_89"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 517,
+            "end": 524,
+            "document": "v_0:td_1",
+            "word": "promote",
+            "id": "to_89"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 53860,
+            "end": 54210,
+            "frameType": "speech",
+            "id": "tf_89"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_89",
+            "source": "tf_89",
+            "id": "al_90"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 525,
+            "end": 534,
+            "document": "v_0:td_1",
+            "word": "satellite",
+            "id": "to_90"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 54210,
+            "end": 54740,
+            "frameType": "speech",
+            "id": "tf_90"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_90",
+            "source": "tf_90",
+            "id": "al_91"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 535,
+            "end": 545,
+            "document": "v_0:td_1",
+            "word": "technology",
+            "id": "to_91"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 54740,
+            "end": 55440,
+            "frameType": "speech",
+            "id": "tf_91"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_91",
+            "source": "tf_91",
+            "id": "al_92"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 546,
+            "end": 548,
+            "document": "v_0:td_1",
+            "word": "to",
+            "id": "to_92"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 55440,
+            "end": 55540,
+            "frameType": "speech",
+            "id": "tf_92"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_92",
+            "source": "tf_92",
+            "id": "al_93"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 549,
+            "end": 553,
+            "document": "v_0:td_1",
+            "word": "help",
+            "id": "to_93"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 55540,
+            "end": 55860,
+            "frameType": "speech",
+            "id": "tf_93"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_93",
+            "source": "tf_93",
+            "id": "al_94"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 554,
+            "end": 557,
+            "document": "v_0:td_1",
+            "word": "the",
+            "id": "to_94"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 55860,
+            "end": 55990,
+            "frameType": "speech",
+            "id": "tf_94"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_94",
+            "source": "tf_94",
+            "id": "al_95"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 558,
+            "end": 566,
+            "document": "v_0:td_1",
+            "word": "american",
+            "id": "to_95"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 55990,
+            "end": 56480,
+            "frameType": "speech",
+            "id": "tf_95"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_95",
+            "source": "tf_95",
+            "id": "al_96"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 567,
+            "end": 573,
+            "document": "v_0:td_1",
+            "word": "farmer",
+            "id": "to_96"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 56480,
+            "end": 56900,
+            "frameType": "speech",
+            "id": "tf_96"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_96",
+            "source": "tf_96",
+            "id": "al_97"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 574,
+            "end": 576,
+            "document": "v_0:td_1",
+            "word": "be",
+            "id": "to_97"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 56900,
+            "end": 57060,
+            "frameType": "speech",
+            "id": "tf_97"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_97",
+            "source": "tf_97",
+            "id": "al_98"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 577,
+            "end": 581,
+            "document": "v_0:td_1",
+            "word": "even",
+            "id": "to_98"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 57090,
+            "end": 57380,
+            "frameType": "speech",
+            "id": "tf_98"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_98",
+            "source": "tf_98",
+            "id": "al_99"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 582,
+            "end": 586,
+            "document": "v_0:td_1",
+            "word": "more",
+            "id": "to_99"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 57380,
+            "end": 57690,
+            "frameType": "speech",
+            "id": "tf_99"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_99",
+            "source": "tf_99",
+            "id": "al_100"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 587,
+            "end": 596,
+            "document": "v_0:td_1",
+            "word": "connected",
+            "id": "to_100"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 57690,
+            "end": 58270,
+            "frameType": "speech",
+            "id": "tf_100"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_100",
+            "source": "tf_100",
+            "id": "al_101"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 597,
+            "end": 599,
+            "document": "v_0:td_1",
+            "word": "to",
+            "id": "to_101"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 60470,
+            "end": 60590,
+            "frameType": "speech",
+            "id": "tf_101"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_101",
+            "source": "tf_101",
+            "id": "al_102"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 600,
+            "end": 603,
+            "document": "v_0:td_1",
+            "word": "the",
+            "id": "to_102"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 60590,
+            "end": 60680,
+            "frameType": "speech",
+            "id": "tf_102"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_102",
+            "source": "tf_102",
+            "id": "al_103"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 604,
+            "end": 609,
+            "document": "v_0:td_1",
+            "word": "world",
+            "id": "to_103"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 60680,
+            "end": 61320,
+            "frameType": "speech",
+            "id": "tf_103"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_103",
+            "source": "tf_103",
+            "id": "al_104"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 610,
+            "end": 619,
+            "document": "v_0:td_1",
+            "word": "travelers",
+            "id": "to_104"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 62790,
+            "end": 63590,
+            "frameType": "speech",
+            "id": "tf_104"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_104",
+            "source": "tf_104",
+            "id": "al_105"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 620,
+            "end": 623,
+            "document": "v_0:td_1",
+            "word": "and",
+            "id": "to_105"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 77370,
+            "end": 77500,
+            "frameType": "speech",
+            "id": "tf_105"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_105",
+            "source": "tf_105",
+            "id": "al_106"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 624,
+            "end": 626,
+            "document": "v_0:td_1",
+            "word": "by",
+            "id": "to_106"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 77500,
+            "end": 77610,
+            "frameType": "speech",
+            "id": "tf_106"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_106",
+            "source": "tf_106",
+            "id": "al_107"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 627,
+            "end": 630,
+            "document": "v_0:td_1",
+            "word": "the",
+            "id": "to_107"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 77610,
+            "end": 77710,
+            "frameType": "speech",
+            "id": "tf_107"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_107",
+            "source": "tf_107",
+            "id": "al_108"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 631,
+            "end": 642,
+            "document": "v_0:td_1",
+            "word": "corporation",
+            "id": "to_108"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 77710,
+            "end": 78480,
+            "frameType": "speech",
+            "id": "tf_108"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_108",
+            "source": "tf_108",
+            "id": "al_109"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 643,
+            "end": 646,
+            "document": "v_0:td_1",
+            "word": "for",
+            "id": "to_109"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 78480,
+            "end": 78640,
+            "frameType": "speech",
+            "id": "tf_109"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_109",
+            "source": "tf_109",
+            "id": "al_110"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 647,
+            "end": 653,
+            "document": "v_0:td_1",
+            "word": "public",
+            "id": "to_110"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 78640,
+            "end": 78970,
+            "frameType": "speech",
+            "id": "tf_110"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_110",
+            "source": "tf_110",
+            "id": "al_111"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 654,
+            "end": 666,
+            "document": "v_0:td_1",
+            "word": "broadcasting",
+            "id": "to_111"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 78970,
+            "end": 79860,
+            "frameType": "speech",
+            "id": "tf_111"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_111",
+            "source": "tf_111",
+            "id": "al_112"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 667,
+            "end": 670,
+            "document": "v_0:td_1",
+            "word": "and",
+            "id": "to_112"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 79960,
+            "end": 80110,
+            "frameType": "speech",
+            "id": "tf_112"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_112",
+            "source": "tf_112",
+            "id": "al_113"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 671,
+            "end": 673,
+            "document": "v_0:td_1",
+            "word": "by",
+            "id": "to_113"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 80110,
+            "end": 80240,
+            "frameType": "speech",
+            "id": "tf_113"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_113",
+            "source": "tf_113",
+            "id": "al_114"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 674,
+            "end": 677,
+            "document": "v_0:td_1",
+            "word": "the",
+            "id": "to_114"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 80240,
+            "end": 80410,
+            "frameType": "speech",
+            "id": "tf_114"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_114",
+            "source": "tf_114",
+            "id": "al_115"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 678,
+            "end": 684,
+            "document": "v_0:td_1",
+            "word": "annual",
+            "id": "to_115"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 80410,
+            "end": 80880,
+            "frameType": "speech",
+            "id": "tf_115"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_115",
+            "source": "tf_115",
+            "id": "al_116"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 685,
+            "end": 694,
+            "document": "v_0:td_1",
+            "word": "financial",
+            "id": "to_116"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 80880,
+            "end": 81450,
+            "frameType": "speech",
+            "id": "tf_116"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_116",
+            "source": "tf_116",
+            "id": "al_117"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 695,
+            "end": 702,
+            "document": "v_0:td_1",
+            "word": "support",
+            "id": "to_117"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 81450,
+            "end": 82100,
+            "frameType": "speech",
+            "id": "tf_117"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_117",
+            "source": "tf_117",
+            "id": "al_118"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 703,
+            "end": 707,
+            "document": "v_0:td_1",
+            "word": "from",
+            "id": "to_118"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 82130,
+            "end": 82360,
+            "frameType": "speech",
+            "id": "tf_118"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_118",
+            "source": "tf_118",
+            "id": "al_119"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 708,
+            "end": 715,
+            "document": "v_0:td_1",
+            "word": "viewers",
+            "id": "to_119"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 82360,
+            "end": 82840,
+            "frameType": "speech",
+            "id": "tf_119"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_119",
+            "source": "tf_119",
+            "id": "al_120"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 716,
+            "end": 720,
+            "document": "v_0:td_1",
+            "word": "like",
+            "id": "to_120"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 82840,
+            "end": 83110,
+            "frameType": "speech",
+            "id": "tf_120"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_120",
+            "source": "tf_120",
+            "id": "al_121"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 721,
+            "end": 724,
+            "document": "v_0:td_1",
+            "word": "you",
+            "id": "to_121"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 83110,
+            "end": 83530,
+            "frameType": "speech",
+            "id": "tf_121"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_121",
+            "source": "tf_121",
+            "id": "al_122"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 725,
+            "end": 734,
+            "document": "v_0:td_1",
+            "word": "president",
+            "id": "to_122"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 84190,
+            "end": 84640,
+            "frameType": "speech",
+            "id": "tf_122"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_122",
+            "source": "tf_122",
+            "id": "al_123"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 735,
+            "end": 742,
+            "document": "v_0:td_1",
+            "word": "clinton",
+            "id": "to_123"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 84640,
+            "end": 85030,
+            "frameType": "speech",
+            "id": "tf_123"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_123",
+            "source": "tf_123",
+            "id": "al_124"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 743,
+            "end": 753,
+            "document": "v_0:td_1",
+            "word": "authorized",
+            "id": "to_124"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 85030,
+            "end": 85640,
+            "frameType": "speech",
+            "id": "tf_124"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_124",
+            "source": "tf_124",
+            "id": "al_125"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 754,
+            "end": 757,
+            "document": "v_0:td_1",
+            "word": "the",
+            "id": "to_125"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 85640,
+            "end": 85710,
+            "frameType": "speech",
+            "id": "tf_125"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_125",
+            "source": "tf_125",
+            "id": "al_126"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 758,
+            "end": 766,
+            "document": "v_0:td_1",
+            "word": "pentagon",
+            "id": "to_126"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 85710,
+            "end": 86300,
+            "frameType": "speech",
+            "id": "tf_126"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_126",
+            "source": "tf_126",
+            "id": "al_127"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 767,
+            "end": 772,
+            "document": "v_0:td_1",
+            "word": "today",
+            "id": "to_127"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 86300,
+            "end": 86660,
+            "frameType": "speech",
+            "id": "tf_127"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_127",
+            "source": "tf_127",
+            "id": "al_128"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 773,
+            "end": 775,
+            "document": "v_0:td_1",
+            "word": "to",
+            "id": "to_128"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 86660,
+            "end": 86740,
+            "frameType": "speech",
+            "id": "tf_128"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_128",
+            "source": "tf_128",
+            "id": "al_129"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 776,
+            "end": 780,
+            "document": "v_0:td_1",
+            "word": "call",
+            "id": "to_129"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 86740,
+            "end": 87050,
+            "frameType": "speech",
+            "id": "tf_129"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_129",
+            "source": "tf_129",
+            "id": "al_130"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 781,
+            "end": 783,
+            "document": "v_0:td_1",
+            "word": "up",
+            "id": "to_130"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 87050,
+            "end": 87170,
+            "frameType": "speech",
+            "id": "tf_130"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_130",
+            "source": "tf_130",
+            "id": "al_131"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 784,
+            "end": 788,
+            "document": "v_0:td_1",
+            "word": "more",
+            "id": "to_131"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 87170,
+            "end": 87360,
+            "frameType": "speech",
+            "id": "tf_131"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_131",
+            "source": "tf_131",
+            "id": "al_132"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 789,
+            "end": 793,
+            "document": "v_0:td_1",
+            "word": "than",
+            "id": "to_132"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 87360,
+            "end": 87510,
+            "frameType": "speech",
+            "id": "tf_132"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_132",
+            "source": "tf_132",
+            "id": "al_133"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 794,
+            "end": 800,
+            "document": "v_0:td_1",
+            "word": "thirty",
+            "id": "to_133"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 87510,
+            "end": 87790,
+            "frameType": "speech",
+            "id": "tf_133"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_133",
+            "source": "tf_133",
+            "id": "al_134"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 801,
+            "end": 809,
+            "document": "v_0:td_1",
+            "word": "thousand",
+            "id": "to_134"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 87790,
+            "end": 88330,
+            "frameType": "speech",
+            "id": "tf_134"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_134",
+            "source": "tf_134",
+            "id": "al_135"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 810,
+            "end": 817,
+            "document": "v_0:td_1",
+            "word": "reserve",
+            "id": "to_135"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 88330,
+            "end": 88860,
+            "frameType": "speech",
+            "id": "tf_135"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_135",
+            "source": "tf_135",
+            "id": "al_136"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 818,
+            "end": 821,
+            "document": "v_0:td_1",
+            "word": "and",
+            "id": "to_136"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 88860,
+            "end": 88980,
+            "frameType": "speech",
+            "id": "tf_136"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_136",
+            "source": "tf_136",
+            "id": "al_137"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 822,
+            "end": 830,
+            "document": "v_0:td_1",
+            "word": "national",
+            "id": "to_137"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 88980,
+            "end": 89440,
+            "frameType": "speech",
+            "id": "tf_137"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_137",
+            "source": "tf_137",
+            "id": "al_138"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 831,
+            "end": 836,
+            "document": "v_0:td_1",
+            "word": "guard",
+            "id": "to_138"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 89440,
+            "end": 89840,
+            "frameType": "speech",
+            "id": "tf_138"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_138",
+            "source": "tf_138",
+            "id": "al_139"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 837,
+            "end": 846,
+            "document": "v_0:td_1",
+            "word": "personnel",
+            "id": "to_139"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 89840,
+            "end": 90660,
+            "frameType": "speech",
+            "id": "tf_139"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_139",
+            "source": "tf_139",
+            "id": "al_140"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 847,
+            "end": 854,
+            "document": "v_0:td_1",
+            "word": "they'll",
+            "id": "to_140"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 90920,
+            "end": 91140,
+            "frameType": "speech",
+            "id": "tf_140"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_140",
+            "source": "tf_140",
+            "id": "al_141"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 855,
+            "end": 857,
+            "document": "v_0:td_1",
+            "word": "be",
+            "id": "to_141"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 91140,
+            "end": 91250,
+            "frameType": "speech",
+            "id": "tf_141"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_141",
+            "source": "tf_141",
+            "id": "al_142"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 858,
+            "end": 862,
+            "document": "v_0:td_1",
+            "word": "used",
+            "id": "to_142"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 91250,
+            "end": 91700,
+            "frameType": "speech",
+            "id": "tf_142"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_142",
+            "source": "tf_142",
+            "id": "al_143"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 863,
+            "end": 865,
+            "document": "v_0:td_1",
+            "word": "in",
+            "id": "to_143"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 91700,
+            "end": 91820,
+            "frameType": "speech",
+            "id": "tf_143"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_143",
+            "source": "tf_143",
+            "id": "al_144"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 866,
+            "end": 869,
+            "document": "v_0:td_1",
+            "word": "the",
+            "id": "to_144"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 91820,
+            "end": 92040,
+            "frameType": "speech",
+            "id": "tf_144"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_144",
+            "source": "tf_144",
+            "id": "al_145"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 870,
+            "end": 873,
+            "document": "v_0:td_1",
+            "word": "air",
+            "id": "to_145"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 92040,
+            "end": 92220,
+            "frameType": "speech",
+            "id": "tf_145"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_145",
+            "source": "tf_145",
+            "id": "al_146"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 874,
+            "end": 882,
+            "document": "v_0:td_1",
+            "word": "campaign",
+            "id": "to_146"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 92220,
+            "end": 92870,
+            "frameType": "speech",
+            "id": "tf_146"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_146",
+            "source": "tf_146",
+            "id": "al_147"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 883,
+            "end": 887,
+            "document": "v_0:td_1",
+            "word": "over",
+            "id": "to_147"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 92870,
+            "end": 93140,
+            "frameType": "speech",
+            "id": "tf_147"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_147",
+            "source": "tf_147",
+            "id": "al_148"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 888,
+            "end": 894,
+            "document": "v_0:td_1",
+            "word": "kosovo",
+            "id": "to_148"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 93140,
+            "end": 93950,
+            "frameType": "speech",
+            "id": "tf_148"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_148",
+            "source": "tf_148",
+            "id": "al_149"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 895,
+            "end": 898,
+            "document": "v_0:td_1",
+            "word": "and",
+            "id": "to_149"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 94320,
+            "end": 94650,
+            "frameType": "speech",
+            "id": "tf_149"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_149",
+            "source": "tf_149",
+            "id": "al_150"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 899,
+            "end": 902,
+            "document": "v_0:td_1",
+            "word": "the",
+            "id": "to_150"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 94650,
+            "end": 94750,
+            "frameType": "speech",
+            "id": "tf_150"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_150",
+            "source": "tf_150",
+            "id": "al_151"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 903,
+            "end": 908,
+            "document": "v_0:td_1",
+            "word": "three",
+            "id": "to_151"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 94750,
+            "end": 95000,
+            "frameType": "speech",
+            "id": "tf_151"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_151",
+            "source": "tf_151",
+            "id": "al_152"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 909,
+            "end": 910,
+            "document": "v_0:td_1",
+            "word": "g",
+            "id": "to_152"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 95000,
+            "end": 95290,
+            "frameType": "speech",
+            "id": "tf_152"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_152",
+            "source": "tf_152",
+            "id": "al_153"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 911,
+            "end": 915,
+            "document": "v_0:td_1",
+            "word": "i've",
+            "id": "to_153"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 95290,
+            "end": 95610,
+            "frameType": "speech",
+            "id": "tf_153"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_153",
+            "source": "tf_153",
+            "id": "al_154"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 916,
+            "end": 924,
+            "document": "v_0:td_1",
+            "word": "captured",
+            "id": "to_154"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 95610,
+            "end": 96050,
+            "frameType": "speech",
+            "id": "tf_154"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_154",
+            "source": "tf_154",
+            "id": "al_155"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 925,
+            "end": 927,
+            "document": "v_0:td_1",
+            "word": "by",
+            "id": "to_155"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 96050,
+            "end": 96260,
+            "frameType": "speech",
+            "id": "tf_155"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_155",
+            "source": "tf_155",
+            "id": "al_156"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 928,
+            "end": 929,
+            "document": "v_0:td_1",
+            "word": "a",
+            "id": "to_156"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 96260,
+            "end": 96330,
+            "frameType": "speech",
+            "id": "tf_156"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_156",
+            "source": "tf_156",
+            "id": "al_157"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 930,
+            "end": 937,
+            "document": "v_0:td_1",
+            "word": "bizarre",
+            "id": "to_157"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 96330,
+            "end": 96760,
+            "frameType": "speech",
+            "id": "tf_157"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_157",
+            "source": "tf_157",
+            "id": "al_158"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 938,
+            "end": 944,
+            "document": "v_0:td_1",
+            "word": "troops",
+            "id": "to_158"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 96760,
+            "end": 97180,
+            "frameType": "speech",
+            "id": "tf_158"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_158",
+            "source": "tf_158",
+            "id": "al_159"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 945,
+            "end": 949,
+            "document": "v_0:td_1",
+            "word": "were",
+            "id": "to_159"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 97180,
+            "end": 97360,
+            "frameType": "speech",
+            "id": "tf_159"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_159",
+            "source": "tf_159",
+            "id": "al_160"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 950,
+            "end": 960,
+            "document": "v_0:td_1",
+            "word": "pronounced",
+            "id": "to_160"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 97360,
+            "end": 97970,
+            "frameType": "speech",
+            "id": "tf_160"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_160",
+            "source": "tf_160",
+            "id": "al_161"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 961,
+            "end": 965,
+            "document": "v_0:td_1",
+            "word": "dead",
+            "id": "to_161"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 97970,
+            "end": 98190,
+            "frameType": "speech",
+            "id": "tf_161"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_161",
+            "source": "tf_161",
+            "id": "al_162"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 966,
+            "end": 968,
+            "document": "v_0:td_1",
+            "word": "by",
+            "id": "to_162"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 98190,
+            "end": 98510,
+            "frameType": "speech",
+            "id": "tf_162"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_162",
+            "source": "tf_162",
+            "id": "al_163"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 969,
+            "end": 972,
+            "document": "v_0:td_1",
+            "word": "red",
+            "id": "to_163"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 98510,
+            "end": 98730,
+            "frameType": "speech",
+            "id": "tf_163"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_163",
+            "source": "tf_163",
+            "id": "al_164"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 973,
+            "end": 978,
+            "document": "v_0:td_1",
+            "word": "cross",
+            "id": "to_164"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 98730,
+            "end": 99070,
+            "frameType": "speech",
+            "id": "tf_164"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_164",
+            "source": "tf_164",
+            "id": "al_165"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 979,
+            "end": 985,
+            "document": "v_0:td_1",
+            "word": "doctor",
+            "id": "to_165"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 99070,
+            "end": 99570,
+            "frameType": "speech",
+            "id": "tf_165"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_165",
+            "source": "tf_165",
+            "id": "al_166"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 986,
+            "end": 988,
+            "document": "v_0:td_1",
+            "word": "as",
+            "id": "to_166"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 99820,
+            "end": 100040,
+            "frameType": "speech",
+            "id": "tf_166"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_166",
+            "source": "tf_166",
+            "id": "al_167"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 989,
+            "end": 995,
+            "document": "v_0:td_1",
+            "word": "bagels",
+            "id": "to_167"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 100040,
+            "end": 100500,
+            "frameType": "speech",
+            "id": "tf_167"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_167",
+            "source": "tf_167",
+            "id": "al_168"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 996,
+            "end": 1003,
+            "document": "v_0:td_1",
+            "word": "bombing",
+            "id": "to_168"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 100500,
+            "end": 100870,
+            "frameType": "speech",
+            "id": "tf_168"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_168",
+            "source": "tf_168",
+            "id": "al_169"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 1004,
+            "end": 1006,
+            "document": "v_0:td_1",
+            "word": "of",
+            "id": "to_169"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 100870,
+            "end": 100950,
+            "frameType": "speech",
+            "id": "tf_169"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_169",
+            "source": "tf_169",
+            "id": "al_170"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 1007,
+            "end": 1013,
+            "document": "v_0:td_1",
+            "word": "serbia",
+            "id": "to_170"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 100950,
+            "end": 101510,
+            "frameType": "speech",
+            "id": "tf_170"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_170",
+            "source": "tf_170",
+            "id": "al_171"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 1014,
+            "end": 1017,
+            "document": "v_0:td_1",
+            "word": "and",
+            "id": "to_171"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 101510,
+            "end": 101740,
+            "frameType": "speech",
+            "id": "tf_171"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_171",
+            "source": "tf_171",
+            "id": "al_172"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 1018,
+            "end": 1021,
+            "document": "v_0:td_1",
+            "word": "the",
+            "id": "to_172"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 101740,
+            "end": 101800,
+            "frameType": "speech",
+            "id": "tf_172"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_172",
+            "source": "tf_172",
+            "id": "al_173"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 1022,
+            "end": 1028,
+            "document": "v_0:td_1",
+            "word": "flight",
+            "id": "to_173"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 101800,
+            "end": 102270,
+            "frameType": "speech",
+            "id": "tf_173"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_173",
+            "source": "tf_173",
+            "id": "al_174"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 1029,
+            "end": 1031,
+            "document": "v_0:td_1",
+            "word": "of",
+            "id": "to_174"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 102270,
+            "end": 102440,
+            "frameType": "speech",
+            "id": "tf_174"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_174",
+            "source": "tf_174",
+            "id": "al_175"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 1032,
+            "end": 1038,
+            "document": "v_0:td_1",
+            "word": "ethnic",
+            "id": "to_175"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 102490,
+            "end": 102900,
+            "frameType": "speech",
+            "id": "tf_175"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_175",
+            "source": "tf_175",
+            "id": "al_176"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 1039,
+            "end": 1047,
+            "document": "v_0:td_1",
+            "word": "albanian",
+            "id": "to_176"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 102900,
+            "end": 103450,
+            "frameType": "speech",
+            "id": "tf_176"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_176",
+            "source": "tf_176",
+            "id": "al_177"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 1048,
+            "end": 1056,
+            "document": "v_0:td_1",
+            "word": "refugees",
+            "id": "to_177"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 103450,
+            "end": 104040,
+            "frameType": "speech",
+            "id": "tf_177"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_177",
+            "source": "tf_177",
+            "id": "al_178"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 1057,
+            "end": 1061,
+            "document": "v_0:td_1",
+            "word": "from",
+            "id": "to_178"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 104040,
+            "end": 104270,
+            "frameType": "speech",
+            "id": "tf_178"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_178",
+            "source": "tf_178",
+            "id": "al_179"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 1062,
+            "end": 1068,
+            "document": "v_0:td_1",
+            "word": "kosovo",
+            "id": "to_179"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 104270,
+            "end": 104880,
+            "frameType": "speech",
+            "id": "tf_179"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_179",
+            "source": "tf_179",
+            "id": "al_180"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 1069,
+            "end": 1077,
+            "document": "v_0:td_1",
+            "word": "continue",
+            "id": "to_180"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 104880,
+            "end": 105590,
+            "frameType": "speech",
+            "id": "tf_180"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_180",
+            "source": "tf_180",
+            "id": "al_181"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 1078,
+            "end": 1080,
+            "document": "v_0:td_1",
+            "word": "on",
+            "id": "to_181"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 106040,
+            "end": 106330,
+            "frameType": "speech",
+            "id": "tf_181"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_181",
+            "source": "tf_181",
+            "id": "al_182"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 1081,
+            "end": 1085,
+            "document": "v_0:td_1",
+            "word": "beer",
+            "id": "to_182"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 106330,
+            "end": 106570,
+            "frameType": "speech",
+            "id": "tf_182"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_182",
+            "source": "tf_182",
+            "id": "al_183"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 1086,
+            "end": 1094,
+            "document": "v_0:td_1",
+            "word": "narrates",
+            "id": "to_183"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 106600,
+            "end": 107140,
+            "frameType": "speech",
+            "id": "tf_183"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_183",
+            "source": "tf_183",
+            "id": "al_184"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 1095,
+            "end": 1098,
+            "document": "v_0:td_1",
+            "word": "our",
+            "id": "to_184"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 107140,
+            "end": 107420,
+            "frameType": "speech",
+            "id": "tf_184"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_184",
+            "source": "tf_184",
+            "id": "al_185"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 1099,
+            "end": 1105,
+            "document": "v_0:td_1",
+            "word": "update",
+            "id": "to_185"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 107450,
+            "end": 107990,
+            "frameType": "speech",
+            "id": "tf_185"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_185",
+            "source": "tf_185",
+            "id": "al_186"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 1106,
+            "end": 1112,
+            "document": "v_0:td_1",
+            "word": "report",
+            "id": "to_186"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 107990,
+            "end": 108370,
+            "frameType": "speech",
+            "id": "tf_186"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_186",
+            "source": "tf_186",
+            "id": "al_187"
+          }
+        },
+        {
+          "@type": "http://vocab.lappsgrid.org/Token",
+          "properties": {
+            "start": 1113,
+            "end": 1118,
+            "document": "v_0:td_1",
+            "word": "chime",
+            "id": "to_187"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/TimeFrame",
+          "properties": {
+            "start": 109800,
+            "end": 111670,
+            "frameType": "speech",
+            "id": "tf_187"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/0.4.0/vocabulary/Alignment",
+          "properties": {
+            "target": "to_187",
+            "source": "tf_187",
+            "id": "al_188"
+          }
+        }
+      ]
+    }
+  ]
+}
