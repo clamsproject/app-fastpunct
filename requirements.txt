@@ -1,0 +1,2 @@
+clams-python==0.5.0
+fastpunct==2.0.2

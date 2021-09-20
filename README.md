@@ -2,12 +2,10 @@
 
 Application using the Python fastpunct module to restore punctuation and capitalization.
 
-URLs:
-
 - https://github.com/notAI-tech/fastpunct
 - https://pypi.org/project/fastpunct/
 
-The Python module is released under the MIT License.
+The fastpunct module is released under the MIT License.
 
 **Requirements**
 
@@ -26,6 +24,8 @@ This also instals Torch.
 >>> text = "hello this is jim lehrer with the newshour on pbs we have news about the tomato it has been observed recently that they dont taste good anymore"
 >>> fastpunct.punct(text)
 ```
+
+
 
 ```
 Hello, this is Jim Lehrer, with the newshour on BBC: "We have news about the tomato it has been observed recently that they don\'t taste good anymore.
@@ -55,3 +55,20 @@ $ curl -H "Accept: application/json" -X POST -d@example-input.json http://0.0.0.
 ```
 
 The second command will take a couple of seconds.
+
+**Docker**
+
+Buidling the image and starting the container:
+
+```
+$ docker build -t clams-fastpunct:2.0.2 .
+$ docker run --name clams-fastpunct --rm -d -p 5000:5000 clams-fastpunct:2.0.2
+```
+
+Pinging the server:
+
+```
+$ curl http://127.0.0.1:5000/
+$ curl -H "Accept: application/json" -X POST -d@example-input.json http://127.0.0.1:5000/
+```
+
