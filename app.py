@@ -66,9 +66,10 @@ class App(ClamsApp):
         metadata.add_input(AnnotationTypes.TimeFrame)
         metadata.add_input(AnnotationTypes.Alignment)
         metadata.add_input(Uri.TOKEN)
-        # For now we are copying the TimeFrame instances. We don't really create
-        # tokens, but spans over the text that are based on tokens, so using
-        # AnnotationTypes.Span instead of Uri.TOKEN.
+        # We are copying the TimeFrame instances since having them included in
+        # the view is a bit clearer. We don't really create tokens, but spans
+        # over the text that are based on tokens, so instead of Uri.TOKEN we are
+        # using AnnotationTypes.Span.
         metadata.add_output(DocumentTypes.TextDocument)
         metadata.add_output(AnnotationTypes.TimeFrame)
         metadata.add_output(AnnotationTypes.Alignment)
@@ -76,31 +77,41 @@ class App(ClamsApp):
         return metadata
 
     def _annotate(self, mmif, **kwargs):
-        #print(mmif.serialize(pretty=True))
         Identifiers.reset()
         self.mmif = mmif if type(mmif) is Mmif else Mmif(mmif)
         for view in list(self.mmif.views):
             annotation_types = [t.shortname for t in view.metadata.contains]
             kaldi_app = 'http://apps.clams.ai/aapb-pua-kaldi-wrapper'
             if view.metadata.app.startswith(kaldi_app):
-                doc = self.mmif.get_documents_in_view(view.id)[0]
-                doc_id = view.id + ':' + doc.id
-                new_view = self._new_view()
-                self._run_fastpunct(doc, view, new_view, doc_id)
+                # As currently set up we do not need the document as input to
+                # fastpunct since we work from the tokens in the input view, but
+                # we hand in the input view since we want to copy some metadata.
+                new_view = self._new_view(view)
+                self._run_fastpunct(view, new_view)
         return self.mmif
 
-    def _new_view(self, docid=None):
+    def _new_view(self, input_view):
+        # first getting some goodies from the previous view, where only the
+        # metadata for the TimeFrame are of interest
+        document = None
+        time_unit = None
+        tf_contains = input_view.metadata.contains.get(AnnotationTypes.TimeFrame)
+        if 'document' in tf_contains:
+            document = tf_contains['document']
+        if 'timeUnit' in tf_contains:
+            time_unit = tf_contains['timeUnit']
+        # now we build the new view
         view = self.mmif.new_view()
         view.metadata.app = self.metadata.identifier
         self.sign_view(view)
-        # TODO: one question here is whether we should copy over the timeframes
-        # since they are somewhat redundant, but having them included in the
-        # view is a bit clearer. Also, think about what the values of document
-        # should be for each new_contain.
-        view.new_contain(DocumentTypes.TextDocument, document=docid)
+        # we know that we create one text document which is the document source
+        # for all Span annotations, and the identifier for that single document
+        # is going to be td1 because of how the Identifiers class works
+        docid = view.id + ':td1'
+        view.new_contain(DocumentTypes.TextDocument)
         view.new_contain(AnnotationTypes.Span, document=docid)
-        view.new_contain(AnnotationTypes.TimeFrame, document=docid)
-        view.new_contain(AnnotationTypes.Alignment, document=docid)
+        view.new_contain(AnnotationTypes.TimeFrame, document=document, timeUnit=time_unit)
+        view.new_contain(AnnotationTypes.Alignment)
         return view
 
     def _read_text(self, textdoc):
@@ -112,10 +123,12 @@ class App(ClamsApp):
             text = textdoc.properties.text.value
         return text
 
-    def _run_fastpunct(self, doc, view, new_view, full_doc_id):
+    def _run_fastpunct(self, view, new_view):
         """Run the NLP tool over the document and add annotations to the view, using the
         full document identifier (which may include a view identifier) for the document
         property."""
+        # TODO: this method is fairly simple, but it is a bit long and might do
+        # too much, perhaps create a new object to do all the view updates
         tokens, timeframes_idx, alignments_idx = self._get_annotations(view)
         timeframes = self._get_aligned_timeframes(tokens, timeframes_idx, alignments_idx)
         segments = self._get_segments(tokens, timeframes)
@@ -130,40 +143,41 @@ class App(ClamsApp):
         text = []
         doc_start = sys.maxsize
         doc_end = -1
+        doc_offset = 0
         for segment in segments:
-            #print('=' * 80)
             aligned_segment = self._run_fastpunct_on_segment(segment)
             for aligned in aligned_segment:
                 (i, word_in_aligned, word_out_aligned,
                  j, word_in, token, timeframe) = aligned
-                if word_out_aligned is not None:
-                    text.append(word_out_aligned)
-                    doc_start = min(doc_start, timeframe.properties['start'])
-                    doc_end = max(doc_end, timeframe.properties['end'])
-                self._add_annotations(new_view, word_out_aligned, token, timeframe)
-                continue
-                timespan = "%s:%s" % (timeframe.properties['start'],
-                                      timeframe.properties['end'])
-                print("%2d  %-12s %-12s  %2d  %-12s %-12s %s"
-                      % (i, word_in_aligned, word_out_aligned,
-                         j, word_in, token.properties['word'], timespan))
+                #self._print_alignment(i, word_in, token, timeframe,
+                #                      j, word_in_aligned, word_out_aligned)
+                if word_out_aligned is None:
+                    continue
+                text.append(word_out_aligned)
+                doc_start = min(doc_start, timeframe.properties['start'])
+                doc_end = max(doc_end, timeframe.properties['end'])
+                p1 = doc_offset
+                p2 = doc_offset + len(word_out_aligned)
+                self._add_annotations(new_view, word_out_aligned, timeframe, p1, p2)
+                doc_offset += len(word_out_aligned) + 1
+        # We have collected the entire text of the new document, add it
+        new_document.text_value = ' '.join(text)
+        # We have also determined the start and end of the timeframe, but update
+        # to reasonable values if there were no token. In that case we might be
+        # better off not adding anything though.
         if doc_start == sys.maxsize:
             doc_start = 0
         if doc_end == -1:
             doc_end = 0
-        text = ' '.join(text)
-        new_document.text_value = text
         new_timeframe.add_property('start', doc_start)
         new_timeframe.add_property('end', doc_end)
 
-    def _add_annotations(self, new_view, word_out_aligned, token, timeframe):
-        # Creating a Span from the word and token, note that start and end are
-        # copied, but will be later overridden to match with the offsets in the
-        # text document
+    def _add_annotations(self, new_view, word_out_aligned, timeframe, p1, p2):
+        # Creating a Span for the new potentially punctuated word
         new_span = new_view.new_annotation(AnnotationTypes.Span, Identifiers.new("s"))
         new_span.add_property('text', word_out_aligned)
-        new_span.add_property('start', token.properties['start'])
-        new_span.add_property('end', token.properties['end'])
+        new_span.add_property('start', p1)
+        new_span.add_property('end', p2)
         # Creating a new TimeFrame from the TimeFrame in the source view.
         new_frame = new_view.new_annotation(AnnotationTypes.TimeFrame, Identifiers.new("tf"))
         new_frame.add_property('start', timeframe.properties['start'])
@@ -234,15 +248,7 @@ class App(ClamsApp):
         segment_tokens, segment_timeframes = segment
         words_in = [t.properties['word'] for t in segment_tokens]
         text_in = ' '.join(words_in)
-        # TODO: remove "This happy"
-        # TODO: add way to fix obvious garbage, maybe governed by an option, the
-        # latter would check whether the two aligned words (before and after
-        # fastpunct), consisting of letters only (no punctuation) are the same
-        # (module capitals), if they are not, undo the fastpunct; this is to
-        # deal with cases where we have PBS ==> BBC and tragedy ==> Tragicity,
-        # maybe also fix children ==> Children even though no period was added
-        # to the token before it (but this would screws us over on entities).
-        text_out = "This happy " + FASTPUNCT.punct(text_in)
+        text_out = FASTPUNCT.punct(text_in)
         words_out = text_out.split()
         words_in_aligned, words_out_aligned = align(words_in, words_out)
         # aligning words_in_aligned ==> words_in
@@ -259,12 +265,16 @@ class App(ClamsApp):
                             j, words_in[j], segment_tokens[j], segment_timeframes[j]))
         return aligned
 
-    def _print_alignment(self, words_in, words_out,
-                         words_in_aligned, words_out_aligned):
-        print('=' * 80)
-        print("%d ==> %d" % (len(words_in), len(words_out)))
-        for i, (w1, w2) in enumerate(zip(words_in_aligned, words_out_aligned)):
-            print("%2d  %-12s %-12s"  % (i, w1, w2))
+    def _print_alignment(self,
+                         i, word_in, token, timeframe,
+                         j, word_in_aligned, word_out_aligned):
+        timespan = "%s:%s" % (timeframe.properties['start'],
+                              timeframe.properties['end'])
+        charspan = "%s:%s" % (token.properties['start'],
+                              token.properties['end'])
+        print("%2d  %-12s %-12s %-15s  %2d  %-12s %-12s"
+              % (j, word_in, charspan, timespan,
+                 i, word_in_aligned, word_out_aligned))
 
 
 class Identifiers(object):
