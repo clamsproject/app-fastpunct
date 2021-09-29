@@ -1,0 +1,25 @@
+
+>>> 0 22 14
+
+=== Intro Good evening. Leading the news this Thursday, three private contributors of contra money told their stories to the Iran contra hearing. A Navy Board of Inquiry began its investigation of the U. S. S. Stark tragedy and President Reagan 
+
+=== intro good evening leading the news this thursday three private contributors of contra money told their stories to the iran contra hearing a navy board of inquiry began its investigation of the u s s stark tragedy and president reagan
+
+=== Int., Good evening leading the news this Thursday, three private contributors of Contra Money told their stories to the Iran Contra hearing, a Navy Board of Inquiry began its investigation of the U. S.'s stark tragedy and President Reagan.
+
+>>> 1 43 24
+
+=== ROBERT MacNEIL: Good evening. In the news tonight, in the TWA bombing, a known Arab woman terrorist who had occupied the seat where the explosion occurred is being sought. Israel says the bombing was the work of Palestinian groups Abu Moussa and Abu Nidal. NASA astronauts testified they did not know the seriousness of problems with space shuttle booster rockets before the Challenger disaster. Details of these stories in our news summary coming up. Judy Woodruff is in Washington tonight. Judy?
+
+=== robert macneil good evening in the news tonight in the twa bombing a known arab woman terrorist who had occupied the seat where the explosion occurred is being sought israel says the bombing was the work of palestinian groups abu moussa and abu nidal nasa astronauts testified they did not know the seriousness of problems with space shuttle booster rockets before the challenger disaster details of these stories in our news summary coming up judy woodruff is in washington tonight judy
+
+=== Robert MacNeil Good evening in the News tonight in the TWA bombing, a known Arab woman terrorist who had occupied the seat where the explosion occurred is being sought, Israel says the bombing was the work of Palestinian groups Abu Moussa and Abu Nidal Nasa astronauts testified they did not know the seriousness of problems with space shuttle booster rockets before the challenger disaster details of these stories in our news summary coming up, Judy Woodruff is in Washington tonight, Judy.
+
+>>> 2 37 515
+
+=== JUDY WOODRUFF: After the news summary, the TWA bombing is once again our major focus tonight. First, Israeli Prime Minister Peres says who he thinks is to blame. Then we hear from a reporter who just returned from Europe and the Mideast finding out how the terrorists operate, and from an airline safety expert. We next move on to a sampling of what some astronauts had to say at today's shuttle disaster hearing. Finally, a documentary report on what's being done to protect airliners from a killer called wind shear.News Summary
+
+=== judy woodruff after the news summary the twa bombing is once again our major focus tonight first israeli prime minister peres says who he thinks is to blame then we hear from a reporter who just returned from europe and the mideast finding out how the terrorists operate and from an airline safety expert we next move on to a sampling of what some astronauts had to say at today's shuttle disaster hearing finally a documentary report on what's being done to protect airliners from a killer called wind shear.news summary
+
+=== Judy Woodruff after the news summary: "The TWA bombing is once again our major focus tonight first Israeli Prime Minister Peres says who he thinks is to blame then we hear from a reporter who just returned from Europe and the Mideast finding out how the terrorists operate and from an airline safety expert we next move on to a sampling of what some astronauts had to say at today's shuttle disaster hearing finally a documentary report on what's being done to protect airliners from a killer called Wind Shear.news summary: "After the news summary: The TWA bombing is once again our major focus tonight first Israeli Prime Minister Peters: "First Israeli Prime Minister Peres says who he thinks is to blame then we hear from a reporter who just returned from Europe and the mideast finding out how the terrorists operate and from an airline safety expert we next move on to a sampling of what some astronauts had to say at today's shuttle disaster hearing finally a documentary report on what some astronaut
+
