@@ -1,7 +1,24 @@
 """evaluate.py
 
-reque
+Usage:
+
 $ python3 evaluate.py GOLD_TRANSCRIPT
+
+This takes a while because large models need to be loaded.
+
+Output is written to standard output.
+
+Here is some legacy code that was used to produce the results in evaluate.txt:
+
+for i in range(3):
+    print(">>> %d %s %s\n\n=== %s\n\n=== %s\n\n=== %s\n"
+          % (i,
+             editdistance.eval(text_gold_paras[i], text_stripped_paras[i]),
+             editdistance.eval(text_gold_paras[i], text_fastpunct_paras[i]),
+             text_gold_paras[i], text_stripped_paras[i], text_fastpunct_paras[i]))
+
+It is not clear how this worked since part of that code are lost (or maybe not
+in this repository).
 
 """
 
