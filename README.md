@@ -44,7 +44,7 @@ The output should like like `data/example-output`.
 
 #### Running a server
 
-The following starts a Flask development server, without the option the application will run in a Gunicorn server.
+The following starts a Flask development server, without the --develop option the application will run in a Gunicorn server.
 
 ```
 $ python app.py --develop
@@ -61,7 +61,7 @@ The second command will take a couple of seconds.
 
 ### Docker
 
-Buidling the image and starting the container:
+Building the image and starting the container:
 
 ```
 $ docker build -t clams-fastpunct:2.0.2 .

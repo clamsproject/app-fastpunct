@@ -4,6 +4,8 @@ Aligning two sequences. The elements of the sequences are stings or string like
 elements, it is not clear to me what interface for the class is expected in the
 latter case.
 
+Originally written by Alex Plotnick.
+
 """
 
 
