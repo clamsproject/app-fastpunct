@@ -14,7 +14,7 @@ $ pip install clams-python==0.5.0
 $ pip install fastpunct==2.0.2
 ```
 
-This also instals Torch.
+This also installs Torch.
 
 ### Usage
 
@@ -40,7 +40,7 @@ $ python test.py data/example-input.json out.json
 <View id=v_1 annotations=573 app=https://apps.clams.ai/fastpunct>
 ```
 
-The output should like like `data/example-output`.
+The output should like `data/example-output`.
 
 #### Running a server
 
@@ -77,7 +77,7 @@ $ curl -H "Accept: application/json" -X POST -d@example-input.json http://127.0.
 
 ### Evaluation
 
-There are two informal evaluations. The first allows you to compare the results of two pipelines:
+There are two informal evaluations. The first allows you to eyeball the results of two pipelines:
 
 - Kaldi ⟹ spaCy NER
 - Kaldi ⟹ fastpunct ⟹ spaCy NER
@@ -96,12 +96,13 @@ Note that this code requires spaCy to be installed and that the code in this rep
 
 The other evaluation is to compare the gold standard transcript in `transcript-fragment.txt` to two files resulting from the following processing sequence:
 
-- transcript_doc  ⟹ stripper ⟹ stripped_doc ⟹ fastpunct ⟹ fastpunct_doc
+- transcript_doc  ⟹ [stripper] ⟹ stripped_doc ⟹ [fastpunct] ⟹ fastpunct_doc
 
-the stripped removes punctuation and makes all lower case and fatspunct tries to restore the original. The idea is to calculate the edit distance between transcript_doc and stripped_doc as well as between transcript_doc and fastpunct_doc. If fastpunct is succesful the edit distance should go down significantly.
+The stripper removes punctuation and makes all letters lower case and fastpunct tries to restore the original. The idea is to calculate the edit distance between transcript_doc and stripped_doc as well as between transcript_doc and fastpunct_doc. If fastpunct is succesful the edit distance should go down significantly.
 
 ```
 $ python3 evaluate.py transcript-fragment.txt
 ```
 
 Results are shown in `evaluate.txt`.
+
