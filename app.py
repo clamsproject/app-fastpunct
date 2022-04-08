@@ -23,14 +23,11 @@ from clams.appmetadata import AppMetadata
 from mmif.serialize import Mmif
 from mmif.vocabulary import DocumentTypes, AnnotationTypes
 from lapps.discriminators import Uri
-
 from fastpunct import FastPunct
 
 from align import align
 from utils import Identifiers
-
-#from cached_fastpunct import results
-#from create_aligned_error_example import segment_in, segment_out
+import evaluation.examples
 
 MMIF_VERSION = '0.4.0'
 MMIF_PYTHON_VERSION = '0.4.5'
@@ -46,7 +43,12 @@ FASTPUNCT = FastPunct()
 
 
 # Maximum pause between words allowed before we insert a segment boundary
-MAX_PAUSE = 1000
+MAX_PAUSE = 250
+
+# Maximum size of a segment. The fastpunct module doesn't do well with sequences
+# longer than 512. Since the sequence length seems to be longer than the number
+# of tokens we play it conservatively here.
+MAX_SEGMENT_SIZE = 256
 
 # We hardwire the name of the Kaldi app so we can use it to find views created
 # by Kaldi, this is not a very elegant way to do this
@@ -125,10 +127,12 @@ class App(ClamsApp):
 
 
 def run_fastpunct(view, new_view):
-    """Run the fastpunct over the text in the view and add annotations to the
-    new view, using the full document identifier (which may include a view
-    identifier) for the document property."""
+    """Run the fastpunct module over the text in the view and add annotations to
+    the new view, including a TextDocument and the individual token-like spans as
+    well as all time frames that the spans are aligned to."""
     segments = get_segments(view)
+    print_segments(segments)
+    return
     new_document, new_timeframe = add_toplevel_annotations(new_view)
     # Loop through the segments and add spans, frames and alignments, this is
     # also where we collect the specifics for the top level document and frame.
@@ -140,8 +144,8 @@ def run_fastpunct(view, new_view):
         if PRINT_PROGRESS:
             print('SEGMENT:', segment)
         aligned_segment = segment.run_fastpunct()
+        #print_alignments(aligned_segment)
         for aligned in aligned_segment:
-            #print_alignment(aligned)
             (i, word_in_aligned, word_out_aligned,
              j, word_in, token, timeframe) = aligned
             if word_out_aligned is None:
@@ -153,19 +157,8 @@ def run_fastpunct(view, new_view):
             p2 = doc_offset + len(word_out_aligned)
             add_annotations(new_view, word_out_aligned, timeframe, p1, p2)
             doc_offset += len(word_out_aligned) + 1
-    # We have collected the entire text of the new document, add it
-    new_document.text_value = ' '.join(text)
-    # We have also determined the start and end of the timeframe, but we
-    # update to reasonable values if there were no tokens. In that case we
-    # might be better off not adding anything though.
-    if doc_start == sys.maxsize:
-        doc_start = 0
-    if doc_end == -1:
-        doc_end = 0
-    new_timeframe.add_property('start', doc_start)
-    new_timeframe.add_property('end', doc_end)
-    #words_in_aligned, words_out_aligned = align(segment_in.split(), segment_out.split())
-    #fix_errors(list(zip(words_in_aligned, words_out_aligned)))
+    update_toplevel_annotations(new_document, new_timeframe,
+                                text, doc_start, doc_end)
 
 
 def get_segments(view):
@@ -175,22 +168,22 @@ def get_segments(view):
     timeframe."""
     tokens, timeframes = get_annotations(view)
     segments = []
+    segment = Segment()
     # the very first start is always considered to be after a pause
     previous_end = -MAX_PAUSE - 1
-    # start with an empty sentence
-    segment = Segment()
     for token, timeframe in zip(tokens, timeframes):
+        t_props = token.properties
+        tf_props = timeframe.properties
         start = timeframe.properties['start']
         end = timeframe.properties['end']
         length = end - start
         pause = start - previous_end
-        if start - previous_end > MAX_PAUSE:
+        #print_token_and_timeframe(token, timeframe, pause)
+        if start - previous_end > MAX_PAUSE or len(segment) >= MAX_SEGMENT_SIZE:
             if segment:
                 segments.append(segment)
             segment = Segment()
-        else:
-            segment.append_token(token)
-            segment.append_timeframe(timeframe)
+        segment.append_token_and_timeframe(token, timeframe)
         previous_end = end
     if segment:
         segments.append(segment)
@@ -245,7 +238,7 @@ def fix_errors(aligned_zipped):
 
 def fix_local_alignment_errors(aligned_zipped):
     """Fix local transformations like 'tragic ==> Tragicity'. Also tentatively
-    copies input word to th eoutput if there is nothing aligned."""
+    copies input word to the output if there is nothing aligned."""
     for i, (word_in, word_out) in enumerate(aligned_zipped):
         # If word_in does not align with anything then copy it to word_out.
         # TODO: this may need a context check.
@@ -312,22 +305,52 @@ def add_annotations(view, word, timeframe, p1, p2):
     new_alignment.add_property('target', new_span.id)
 
 
-def print_alignmentX(i, word_in, token, timeframe,
-                    j, word_in_aligned, word_out_aligned):
-    timespan = "%s:%s" % (timeframe.properties['start'], timeframe.properties['end'])
-    charspan = "%s:%s" % (token.properties['start'], token.properties['end'])
-    print("%2d  %-12s %-12s %-15s  %2d  %-12s %-12s"
-          % (j, word_in, charspan, timespan,
-             i, word_in_aligned, word_out_aligned))
+def update_toplevel_annotations(
+        new_document, new_timeframe, text, doc_start, doc_end):
+    """Update the TextDocument and TimeFrame with information collected while
+    looping through all segments."""
+    new_document.text_value = ' '.join(text)
+    # We have determined the start and end of the timeframe, but we update to
+    # reasonable values if there were no tokens. In that case we might be better
+    # off not adding anything though.
+    if doc_start == sys.maxsize:
+        doc_start = 0
+    if doc_end == -1:
+        doc_end = 0
+    new_timeframe.add_property('start', doc_start)
+    new_timeframe.add_property('end', doc_end)
+
+
+def print_segments(segments):
+    for segment in segments:
+        print(segment)
+
+
+def print_alignments(alignments, start=None, end=None):
+    """Debugging method to print a list of alignments."""
+    if start is None and end is None:
+        start = 0
+        end = len(alignments)
+        for i in range(start, end):
+            print_alignment(alignments[i])
 
 
 def print_alignment(aligned):
+    """Debugging method to print an alignment."""
     (i, word_in_aligned, word_out_aligned, j, word_in, token, timeframe) = aligned
     timespan = "%s:%s" % (timeframe.properties['start'], timeframe.properties['end'])
     charspan = "%s:%s" % (token.properties['start'], token.properties['end'])
     print("%2d  %-12s %-12s %-15s  %2d  %-12s %-12s"
           % (j, word_in, charspan, timespan,
              i, word_in_aligned, word_out_aligned))
+
+
+def print_token_and_timeframe(token, timeframe, pause):
+    t_props = token.properties
+    tf_props = timeframe.properties
+    print("%4d %4d  %6d %6d %4d %s"
+          % (t_props['start'], t_props['end'],
+             tf_props['start'], tf_props['end'], pause, t_props['word']))
 
 
 class Segment(object):
@@ -347,10 +370,8 @@ class Segment(object):
     def __len__(self):
         return len(self.tokens)
 
-    def append_token(self, token):
+    def append_token_and_timeframe(self, token, timeframe):
         self.tokens.append(token)
-
-    def append_timeframe(self, timeframe):
         self.timeframes.append(timeframe)
 
     def words(self):
@@ -362,10 +383,12 @@ class Segment(object):
     def run_fastpunct(self):
         text_in = self.text()
         text_out = FASTPUNCT.punct(text_in)
-        #text_out = results.get(text_in, '')
+        #text_out = evaluation.examples.cached_results.get(text_in, '')
         words_in = self.words()
         words_out = text_out.split()
         words_in_aligned, words_out_aligned = align(words_in, words_out)
+        # TODO: maybe the following needs to be moved elsewhere
+        # TODO: conceptually that aligned list is somewhat unintuitive
         aligned_zipped = list(zip(words_in_aligned, words_out_aligned))
         fix_errors(aligned_zipped)
         aligned = []

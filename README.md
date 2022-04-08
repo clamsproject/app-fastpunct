@@ -40,7 +40,7 @@ $ python test.py data/example-input.json out.json
 <View id=v_1 annotations=573 app=https://apps.clams.ai/fastpunct>
 ```
 
-The output should like `data/example-output`.
+The output should look like `data/example-output`.
 
 #### Running a server
 
