@@ -33,7 +33,7 @@ MMIF_VERSION = '0.4.0'
 MMIF_PYTHON_VERSION = '0.4.5'
 CLAMS_PYTHON_VERSION = '0.5.0'
 
-APP_VERSION = '0.0.2'
+APP_VERSION = '0.0.3'
 APP_LICENSE = 'Apache 2.0'
 ANALYZER_VERSION = '2.0.2'
 ANALYZER_LICENSE = 'MIT License'
@@ -131,8 +131,7 @@ def run_fastpunct(view, new_view):
     the new view, including a TextDocument and the individual token-like spans as
     well as all time frames that the spans are aligned to."""
     segments = get_segments(view)
-    print_segments(segments)
-    return
+    #print_segments(segments)
     new_document, new_timeframe = add_toplevel_annotations(new_view)
     # Loop through the segments and add spans, frames and alignments, this is
     # also where we collect the specifics for the top level document and frame.
