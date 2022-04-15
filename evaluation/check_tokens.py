@@ -17,8 +17,9 @@ TODO:
 - Currently there is no check whether a view is from Kaldi or fastpunct and all
   views are treated equally and TOkens and Spans are printed for all views.
 
-- It assumes that for tokens the document is on the annotation and for spans in
-  the metadata, this will break no views that behave differently.
+- It assumes that for tokens the reference to the document is on the annotation
+  and for spans it is in the view metadata. This will break on views that behave
+  differently.
 
 """
 

@@ -10,7 +10,7 @@ We have set up two informal evaluations and associated visualizations.
 
 - T1 → remove capitals and punctuation → T2 → fastpunct → T3
 
-It then mesures the edit distance e12 between T1 and T2 and the edit distance e13 between T1 and T3. With these measure we see e12 as the high edit distance that needs to be reduced by running fastpunct. And e13 ideally is 0, that is, the original is restored. Here is a typical result:
+It then measures the edit distance e12 between T1 and T2 and the edit distance e13 between T1 and T3. With these measure we see e12 as the high edit distance that needs to be reduced by running fastpunct. And e13 ideally is 0, that is, the original is restored. Here is a typical result:
 
 ```
 >>> 22 14
