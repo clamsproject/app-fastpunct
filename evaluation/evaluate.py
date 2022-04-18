@@ -62,7 +62,7 @@ def eval_paragraph(para, fh1, fh2):
     fh1.write("%s\n" % ('=' * 80))
     fh1.write("Evaluating paragraph of %d tokens...\n" % len(para.split()))
     stripped_para = strip_punctuation(para)
-    processed_para = fp.punct(stripped_para)
+    processed_para = run_fastpunct(stripped_para)
     fh1.write("%s\n%s\n" % ("-" * 80, para))
     fh1.write("%s\n%s\n" % ("-" * 80, stripped_para))
     fh1.write("%s\n%s\n" % ("-" * 80, processed_para))
@@ -96,6 +96,19 @@ def dribble_files(fname, timestamp):
         printname = printname[len(fixit_prefix):]
     return ('dribble-%s-%s-long.txt' % (timestamp, printname),
             'dribble-%s-%s-summary.txt' % (timestamp, printname))
+
+def run_fastpunct(text_in):
+    # This does the same as the method Segment.run_fastpunct() in the main
+    # application in ../app.py.
+    text_out = fp.punct(text_in)
+    ratio = len(text_in) / len(text_out)
+    if False:
+        print('>>> %4d  %.2f  %s' % (len(text_in), ratio, text_out[:80]))
+    # Undo all processing when we run into the nasty case where fastpunct
+    # flips out on longer input with repetitions.
+    if ratio < 0.95 and len(text_in.split()) > 10:
+        text_out = text_in
+    return text_out
 
 def paragraph_status_short(para, len_p2, len_p3, ratio, ed_p1_p2, ed_p1_p3):
     text = para.replace('\n', '\\n ')[:40]

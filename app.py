@@ -131,7 +131,6 @@ def run_fastpunct(view, new_view):
     the new view, including a TextDocument and the individual token-like spans as
     well as all time frames that the spans are aligned to."""
     segments = get_segments(view)
-    #print_segments(segments)
     new_document, new_timeframe = add_toplevel_annotations(new_view)
     # Loop through the segments and add spans, frames and alignments, this is
     # also where we collect the specifics for the top level document and frame.
@@ -142,8 +141,8 @@ def run_fastpunct(view, new_view):
     for segment in segments:
         if PRINT_PROGRESS:
             print('SEGMENT:', segment)
-        aligned_segment = segment.run_fastpunct()
-        #print_alignments(aligned_segment)
+        text_out = segment.run_fastpunct()
+        aligned_segment = align_new_text(segment, text_out)
         for aligned in aligned_segment:
             (i, word_in_aligned, word_out_aligned,
              j, word_in, token, timeframe) = aligned
@@ -158,6 +157,30 @@ def run_fastpunct(view, new_view):
             doc_offset += len(word_out_aligned) + 1
     update_toplevel_annotations(new_document, new_timeframe,
                                 text, doc_start, doc_end)
+
+
+def align_new_text(segment, text_out):
+    """Align the text with restored punctuation and capitalization with the
+    tokens and timeframes in the segment."""
+    words_in = segment.words()
+    words_out = text_out.split()
+    words_in_aligned, words_out_aligned = align(words_in, words_out)
+    # TODO: maybe the following needs to be moved elsewhere
+    # TODO: conceptually that aligned list is somewhat unintuitive
+    aligned_zipped = list(zip(words_in_aligned, words_out_aligned))
+    fix_errors(aligned_zipped)
+    aligned = []
+    adjustment = 0
+    for i, (word_in_aligned, word_out_aligned) in enumerate(aligned_zipped):
+        if word_in_aligned is None:
+            adjustment += 1
+        # make sure j points to a legal index in the original data
+        j = max(0, i - adjustment)
+        j = min(j, len(segment.tokens) - 1)
+        aligned.append((i, word_in_aligned, word_out_aligned,
+                        j, words_in[j], segment.tokens[j], segment.timeframes[j]))
+    #print_alignments(aligned)
+    return aligned
 
 
 def get_segments(view):
@@ -330,8 +353,9 @@ def print_alignments(alignments, start=None, end=None):
     if start is None and end is None:
         start = 0
         end = len(alignments)
-        for i in range(start, end):
-            print_alignment(alignments[i])
+    for i in range(start, end):
+        print_alignment(alignments[i])
+    print()
 
 
 def print_alignment(aligned):
@@ -382,25 +406,14 @@ class Segment(object):
     def run_fastpunct(self):
         text_in = self.text()
         text_out = FASTPUNCT.punct(text_in)
-        #text_out = evaluation.examples.cached_results.get(text_in, '')
-        words_in = self.words()
-        words_out = text_out.split()
-        words_in_aligned, words_out_aligned = align(words_in, words_out)
-        # TODO: maybe the following needs to be moved elsewhere
-        # TODO: conceptually that aligned list is somewhat unintuitive
-        aligned_zipped = list(zip(words_in_aligned, words_out_aligned))
-        fix_errors(aligned_zipped)
-        aligned = []
-        adjustment = 0
-        for i, (word_in_aligned, word_out_aligned) in enumerate(aligned_zipped):
-            if word_in_aligned is None:
-                adjustment += 1
-            # make sure j points to a legal index in the original data
-            j = max(0, i - adjustment)
-            j = min(j, len(self.tokens) - 1)
-            aligned.append((i, word_in_aligned, word_out_aligned,
-                            j, words_in[j], self.tokens[j], self.timeframes[j]))
-        return aligned
+        ratio = len(text_in) / len(text_out)
+        if False:
+            print('>>> %4d  %.2f  %s' % (len(text_in), ratio, text_out[:80]))
+        # Undo all processing when we run into the nasty case where fastpunct
+        # flips out on longer input with repetitions.
+        if ratio < 0.95 and len(text_in.split()) > 10:
+            text_out = text_in
+        return text_out
 
 
 if __name__ == "__main__":
