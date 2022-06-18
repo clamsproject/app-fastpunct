@@ -10,7 +10,7 @@ The fastpunct module is released under the MIT License.
 **Requirements**
 
 ```
-$ pip install clams-python==0.5.0
+$ pip install clams-python==0.5.1
 $ pip install fastpunct==2.0.2
 ```
 
@@ -64,8 +64,8 @@ The second command will take a couple of seconds.
 Building the image and starting the container:
 
 ```
-$ docker build -t clams-fastpunct:2.0.2 .
-$ docker run --name clams-fastpunct --rm -d -p 5000:5000 clams-fastpunct:2.0.2
+$ docker build -t clams-fastpunct .
+$ docker run --name clams-fastpunct --rm -d -p 5000:5000 clams-fastpunct
 ```
 
 Pinging the server:
