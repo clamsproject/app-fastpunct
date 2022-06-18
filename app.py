@@ -7,7 +7,7 @@ computation and neural networks.
 
 Requirements
 
-$ pip install clams-python==0.5.0
+$ pip install clams-python==0.5.1
 $ pip install fastpunct==2.0.2
 
 """
@@ -30,10 +30,10 @@ from utils import Identifiers
 import evaluation.examples
 
 MMIF_VERSION = '0.4.0'
-MMIF_PYTHON_VERSION = '0.4.5'
-CLAMS_PYTHON_VERSION = '0.5.0'
+MMIF_PYTHON_VERSION = '0.4.6'
+CLAMS_PYTHON_VERSION = '0.5.1'
 
-APP_VERSION = '0.0.4'
+APP_VERSION = '0.0.5'
 APP_LICENSE = 'Apache 2.0'
 ANALYZER_VERSION = '2.0.2'
 ANALYZER_LICENSE = 'MIT License'
